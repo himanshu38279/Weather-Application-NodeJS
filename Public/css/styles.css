@@ -48,9 +48,10 @@ h1{
 
 
 header a{
-    color: #888888;
+    color: blue;
     margin-right: 8px;
-    text-decoration: none;
+    text-decoration: underline;
+    
 }
 
 input{
