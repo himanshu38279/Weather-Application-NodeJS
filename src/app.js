@@ -15,6 +15,8 @@ hbs.registerPartials(partialpath)
 app.set('views', viewpath);
 app.set('view engine', 'hbs');
 
+const port = process.env.PORT || 3000;
+
 //s et up the public directory
 const dirpath = path.join(__dirname,'../Public')
 // console.log(path.join(__dirname,'../Public/help.html'))
@@ -133,6 +135,6 @@ app.get('*',(req,res)=>{
     res.send('My page 404')
 })
 
-app.listen(3000,()=>{
-    console.log("express server up on 3000 port")
+app.listen(port,()=>{
+    console.log("express server up on 3000"+ port)
 })
