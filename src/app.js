@@ -1,5 +1,6 @@
 const path = require('path')
 const express = require('express')
+const cors = require('cors');
 const app = express()
 const hbs = require('hbs')
 
@@ -22,6 +23,7 @@ const dirpath = path.join(__dirname,'../Public')
 
 // to see the static view page
 app.use(express.static(dirpath))
+app.use(cors());
 
 app.get('',(req,res)=>{
     res.render('index',{
